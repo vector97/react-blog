@@ -1,5 +1,5 @@
-import { FC, JSX, PropsWithChildren, useMemo, useState } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
+import {FC, JSX, PropsWithChildren, useMemo, useState} from "react";
+import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from "./themeContext";
 
 interface ThemeProviderProps extends PropsWithChildren {
     children: JSX.Element
