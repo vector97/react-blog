@@ -1,8 +1,12 @@
-const MainPage = () => {
+import {FC} from "react";
+
+
+const MainPage: FC = () => {
+
     return (
-        <div>
+        <>
             Main Page
-        </div>
+        </>
     );
 };
 

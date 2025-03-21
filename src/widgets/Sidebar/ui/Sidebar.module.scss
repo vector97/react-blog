@@ -1,0 +1,22 @@
+.sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height));
+  padding: 20px;
+  background-color: var(--inverted-bg-color);
+  transition: width 0.3s ease;
+}
+
+.collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+
+.switchers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}

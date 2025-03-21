@@ -5,7 +5,7 @@ export const classNames = (className: string, mods: Mods = {}, additional: strin
         className,
         ...Object.entries(mods)
             .filter(([_, value]) => Boolean(value))
-            .map((className) => className),
+            .map(([className]) => className),
         ...additional.filter(Boolean)
     ]
         .join(' ')
