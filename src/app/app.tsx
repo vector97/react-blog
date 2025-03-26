@@ -3,6 +3,7 @@ import {useTheme} from "@shared/config/theme";
 import {cls} from "@shared/lib/classNames";
 import {AppRouter} from "./providers/router";
 import {Navbar} from "@widgets/Navbar";
+import {Sidebar} from "@widgets/Sidebar";
 
 export const App = () => {
     const { theme } = useTheme()
@@ -10,7 +11,10 @@ export const App = () => {
     return (
         <div className={cls('app', {}, [theme])}>
             <Navbar />
-            <AppRouter />
+            <div className='layout'>
+                <Sidebar />
+                <AppRouter />
+            </div>
         </div>
     );
 };

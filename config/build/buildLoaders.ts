@@ -1,6 +1,7 @@
 import {RuleSetRule} from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {BuildOptions} from "./types/config";
+import ReactRefreshTypeScript from 'react-refresh-typescript';
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     const svgLoader = {
@@ -20,7 +21,17 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     const typescriptLoader = {
         exclude: /node_modules/,
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: [
+            {
+                loader: 'ts-loader',
+                options: {
+                    getCustomTransformers: () => ({
+                        before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+                    }),
+                    transpileOnly: isDev,
+                },
+            },
+        ],
     };
 
     const styleLoader = {
