@@ -1,17 +1,19 @@
-import {cls} from "shared/lib/classNames";
-import style from './AppLink.module.scss';
-import {FC} from "react";
-import {Link, LinkProps} from "react-router-dom";
+import { cls } from "shared/lib/classNames";
+import { FC } from "react";
+import { Link, LinkProps } from "react-router-dom";
+import style from "./AppLink.module.scss";
 
-type AppLinkVariant = 'primary' | 'secondary';
+type AppLinkVariant = "primary" | "secondary";
 
 interface AppLinkProps extends LinkProps {
     className?: string;
-    variant?: AppLinkVariant
+    variant?: AppLinkVariant;
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
-    const { className, to, children, variant = 'primary', ...rest } = props;
+    const {
+        className, to, children, variant = "primary", ...rest
+    } = props;
 
     return (
         <Link

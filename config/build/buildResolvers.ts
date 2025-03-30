@@ -1,5 +1,5 @@
-import {ResolveOptions} from "webpack";
-import {BuildOptions} from "./types/config";
+import { ResolveOptions } from "webpack";
+import { BuildOptions } from "./types/config";
 
 export function buildResolvers(options: BuildOptions): ResolveOptions {
     return {
@@ -11,9 +11,9 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
             "@entities/*": `${options.paths.src}/entities/*`,
             "@shared/*": `${options.paths.src}/shared/*`,
         },
-        extensions: ['.tsx', '.ts', '.js'],
-        mainFiles: ['index'],
-        modules: [options.paths.src, 'node_modules'],
-        preferAbsolute: true
-    }
+        extensions: [".tsx", ".ts", ".js"],
+        mainFiles: ["index"],
+        modules: [options.paths.src, "node_modules"],
+        preferAbsolute: true,
+    };
 }

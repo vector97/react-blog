@@ -1,5 +1,5 @@
-import {Configuration} from "webpack-dev-server";
-import {BuildOptions} from "./types/config";
+import { Configuration } from "webpack-dev-server";
+import { BuildOptions } from "./types/config";
 
 export function buildDevServer(options: BuildOptions): Configuration {
     return {
@@ -7,5 +7,5 @@ export function buildDevServer(options: BuildOptions): Configuration {
         hot: true,
         open: true,
         port: options.port,
-    }
+    };
 }
