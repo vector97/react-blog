@@ -6,15 +6,15 @@ import { Sidebar } from "@widgets/Sidebar";
 import { AppRouter } from "./providers/router";
 
 export function App() {
-  const { theme } = useTheme();
+    const { theme } = useTheme();
 
-  return (
-    <div className={cls("app", {}, [theme])}>
-      <Navbar />
-      <div className="layout">
-        <Sidebar />
-        <AppRouter />
-      </div>
-    </div>
-  );
+    return (
+        <div className={cls("app", {}, [theme])}>
+            <Navbar />
+            <div className="layout">
+                <Sidebar />
+                <AppRouter />
+            </div>
+        </div>
+    );
 }
